@@ -1,0 +1,22 @@
+{
+  "name": "zainab_personal_bot",
+  "routine_id": "trig_0136rLScj7TAAKq6faccFJTY",
+  "routine_url": "https://claude.ai/code/routines/trig_0136rLScj7TAAKq6faccFJTY",
+  "cron_expression": "0 4-16 * * *",
+  "cron_timezone_note": "UTC expression equivalent to hourly, 9am-9pm Asia/Karachi",
+  "style": "short, professional and friendly",
+  "model": "claude-sonnet-5",
+  "delivery": "Gmail draft to zainab.zaheer@niete.edu.pk (draft only, never auto-sent)",
+  "mcp_connections": [
+    {
+      "name": "Gmail",
+      "connector_uuid": "bd163978-4637-4501-844c-e3a2b1423568"
+    }
+  ],
+  "ask_before_risky_actions": true,
+  "scope": {
+    "grades": "1-10, all grades every day",
+    "subjects_grades_1_8": ["English", "Urdu", "Mathematics", "General Science"],
+    "subjects_grades_9_10": ["English", "Urdu", "Mathematics", "Physics", "Chemistry", "Biology"]
+  }
+}
