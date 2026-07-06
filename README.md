@@ -9,7 +9,9 @@ Every hour, 9am-9pm (Asia/Karachi), it generates FBISE (Federal Board of Interme
 - Grades 1-8: English, Urdu, Mathematics, General Science
 - Grades 9-10: English, Urdu, Mathematics, Physics, Chemistry, Biology
 
-It tracks what's already been generated each day (via a Daily Activity Status table in a Gmail draft) so it never duplicates a subject/grade that's already done. The full result is kept as a single, continuously updated **Gmail draft** — it is never sent automatically, and calendar events are never created automatically, per an "ask before risky actions" rule.
+It checks Google Drive for a doc titled "FBISE Daily Activities - <date>" before generating anything, so it never duplicates a day that's already done. The full day's content (all grades, all subjects) is generated in one run and saved as a single **Google Drive doc**.
+
+**Delivery note:** this was originally designed to use a Gmail draft (never auto-sent, per an "ask before risky actions" rule). Gmail could not be authorized for automated/routine use because the organization's connector policy disables "always allow" for it — only interactive/chat use works, not scheduled routines. Google Drive is authorized for routines, so delivery was switched there. If the org policy changes, delivery can be switched back to Gmail.
 
 ## Files
 

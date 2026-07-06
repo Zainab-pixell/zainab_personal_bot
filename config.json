@@ -6,11 +6,12 @@
   "cron_timezone_note": "UTC expression equivalent to hourly, 9am-9pm Asia/Karachi",
   "style": "short, professional and friendly",
   "model": "claude-sonnet-5",
-  "delivery": "Gmail draft to zainab.zaheer@niete.edu.pk (draft only, never auto-sent)",
+  "delivery": "Google Drive doc, created once per day, titled 'FBISE Daily Activities - <date>'",
+  "delivery_history": "Originally Gmail draft delivery; switched to Google Drive because the org's connector policy disables 'always allow' for Gmail, which blocks it from being usable by automated routines. Google Drive is authorized for routines.",
   "mcp_connections": [
     {
-      "name": "Gmail",
-      "connector_uuid": "bd163978-4637-4501-844c-e3a2b1423568"
+      "name": "Google-Drive",
+      "connector_uuid": "33d7427b-069b-4234-aaa8-2a99d9a0e4e6"
     }
   ],
   "ask_before_risky_actions": true,
