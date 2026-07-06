@@ -9,9 +9,9 @@ Once daily, at 9am (Asia/Karachi), it generates FBISE (Federal Board of Intermed
 - Grades 1-8: English, Urdu, Mathematics, General Science
 - Grades 9-10: English, Urdu, Mathematics, Physics, Chemistry, Biology
 
-The full day's content (all grades, all subjects) is generated in one run and output as that run's own response text — Zainab reads it via the routine's run-history page.
+The full day's content (all grades, all subjects) is generated in one run, written in plain, readable paragraphs (not a coding-style table), rendered into a PDF, and sent directly to Zainab as a file using the SendUserFile tool.
 
-**Delivery note:** this was originally designed to use a Gmail draft (never auto-sent, per an "ask before risky actions" rule). Gmail could not be authorized for automated/routine use because the organization's connector policy disables "always allow" for it — only interactive/chat use works, not scheduled routines. Delivery was then switched to a Google Drive doc, but the Drive connector's authorization got stuck pending approval. Rather than block on that, delivery was switched again to plain run output (no connector at all) — the schedule also moved from hourly to once-daily since there's no longer a way to check whether a given day is already done. If Drive (or another connector) is later approved, delivery can be switched back to produce a per-day shareable link.
+**Delivery note:** this was originally designed to use a Gmail draft (never auto-sent, per an "ask before risky actions" rule). Gmail could not be authorized for automated/routine use because the organization's connector policy disables "always allow" for it — only interactive/chat use works, not scheduled routines. Delivery was then switched to a Google Drive doc, but the Drive connector's authorization got stuck pending approval. Rather than block on that, delivery was switched to plain run output (no connector at all) — the schedule also moved from hourly to once-daily since there's no longer a way to check whether a given day is already done. That run-output text still looked like a coding data table, so delivery was refined once more: the routine now builds its own PDF (readable paragraphs, proper formatting) and sends it straight to Zainab via SendUserFile — no connector, no approval wait, and no more raw table formatting.
 
 ## Files
 

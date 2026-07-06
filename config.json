@@ -6,8 +6,8 @@
   "cron_timezone_note": "UTC expression equivalent to 9:03am Asia/Karachi, once daily",
   "style": "short, professional and friendly",
   "model": "claude-sonnet-5",
-  "delivery": "No external connector. Full content is produced as the run's own output text, viewable via the routine's run-history page.",
-  "delivery_history": "Originally Gmail draft delivery; switched to Google Drive because the org's connector policy disables 'always allow' for Gmail, blocking automated/routine use. The Google Drive connector then got stuck pending approval, so delivery was switched again to routine run output only (no connector) so the bot keeps working without waiting on approvals. If Drive (or another connector) is later approved, delivery can be switched to produce a per-day shareable link.",
+  "delivery": "PDF file, built with Bash inside the routine's own sandbox and sent directly to Zainab via the SendUserFile tool. No MCP connector involved.",
+  "delivery_history": "Originally Gmail draft delivery; switched to Google Drive because the org's connector policy disables 'always allow' for Gmail, blocking automated/routine use. The Google Drive connector then got stuck pending approval, so delivery was switched to routine run output only (no connector). That output was in a coding-style pipe-table format, hard for a non-coder to read, so it was replaced with a self-generated PDF (plain readable paragraphs, proper formatting) delivered straight to Zainab via SendUserFile — no connector needed at all.",
   "mcp_connections": [],
   "ask_before_risky_actions": true,
   "scope": {
