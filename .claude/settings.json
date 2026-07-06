@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/daily-wrap-up-notify.py",
+            "timeout": 10,
+            "statusMessage": "Checking if a notes/ file changed..."
+          }
+        ]
+      }
+    ]
+  }
+}
