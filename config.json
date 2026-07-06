@@ -2,18 +2,13 @@
   "name": "zainab_personal_bot",
   "routine_id": "trig_0136rLScj7TAAKq6faccFJTY",
   "routine_url": "https://claude.ai/code/routines/trig_0136rLScj7TAAKq6faccFJTY",
-  "cron_expression": "0 4-16 * * *",
-  "cron_timezone_note": "UTC expression equivalent to hourly, 9am-9pm Asia/Karachi",
+  "cron_expression": "3 4 * * *",
+  "cron_timezone_note": "UTC expression equivalent to 9:03am Asia/Karachi, once daily",
   "style": "short, professional and friendly",
   "model": "claude-sonnet-5",
-  "delivery": "Google Drive doc, created once per day, titled 'FBISE Daily Activities - <date>'",
-  "delivery_history": "Originally Gmail draft delivery; switched to Google Drive because the org's connector policy disables 'always allow' for Gmail, which blocks it from being usable by automated routines. Google Drive is authorized for routines.",
-  "mcp_connections": [
-    {
-      "name": "Google-Drive",
-      "connector_uuid": "33d7427b-069b-4234-aaa8-2a99d9a0e4e6"
-    }
-  ],
+  "delivery": "No external connector. Full content is produced as the run's own output text, viewable via the routine's run-history page.",
+  "delivery_history": "Originally Gmail draft delivery; switched to Google Drive because the org's connector policy disables 'always allow' for Gmail, blocking automated/routine use. The Google Drive connector then got stuck pending approval, so delivery was switched again to routine run output only (no connector) so the bot keeps working without waiting on approvals. If Drive (or another connector) is later approved, delivery can be switched to produce a per-day shareable link.",
+  "mcp_connections": [],
   "ask_before_risky_actions": true,
   "scope": {
     "grades": "1-10, all grades every day",
